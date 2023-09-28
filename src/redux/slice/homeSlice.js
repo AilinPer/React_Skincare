@@ -8,8 +8,14 @@ const homeSlice = createSlice({
     initialState: {
         allCategories: categories,
         allProducts: products,
+        categorySelected: "",
     },
-    reducers: {},
+    reducers: {
+        setCategory: (state, action) => {
+            state.categorySelected = action.payload
+        }
+    },
 
 })
+export const { setCategory } = homeSlice.actions
 export default homeSlice.reducer

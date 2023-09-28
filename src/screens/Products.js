@@ -14,7 +14,7 @@ const Products = ({navigation, route}) => {
     const { item } = route.params 
 
     const products = useSelector( state => state.homeSlice.allProducts )
-    console.log(products)
+    //console.log(JSON.stringify(products, null, " "))
 
 
     useEffect(() => {

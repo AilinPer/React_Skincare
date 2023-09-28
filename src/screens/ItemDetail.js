@@ -25,6 +25,10 @@ const ItemDetail = ({navigation, route}) => {
             source={{uri:item.imagen[0]}}/>
             <Text style={styles.descripcion}>{initialProd.descripcion}</Text>
             <Text style={styles.descripcion}>${initialProd.precio}</Text>
+            <Pressable onPress={() => console.log("Abrir la camara")}
+            style={{ marginLeft: 15, marginBottom: 10 }}>
+                <Text>Agregar al carrito</Text>
+            </Pressable>
         </SafeAreaView>
     )
 }
