@@ -4,11 +4,15 @@ import Header from '../components/Header'
 import { useSelector } from "react-redux"
 import { colors } from '../theme/colors'
 import CategoryItem from '../components/CategoryItem'
+import { useGetCategoriesQuery } from "../services/ecommerceApi"
 
 const Home = ({navigation}) => {
 
 const categories = useSelector( state => state.homeSlice.allCategories )
 
+const { data } = useGetCategoriesQuery()
+/* const categories = datos.data
+console.log(categories) */
 
     return (
         <SafeAreaView>

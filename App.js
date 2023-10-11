@@ -4,6 +4,10 @@ import { useFonts } from 'expo-font';
 import TabNav from './src/Navigation/TabNav';
 import { Provider } from 'react-redux';
 import { store } from './src/redux/store';
+import Login from './src/screens/Login';
+import Registrer from './src/screens/Registrer';
+import AuthNav from './src/Navigation/AuthNav';
+import MainNav from './src/Navigation/MainNav';
 
 export default function App() {
 
@@ -17,10 +21,8 @@ export default function App() {
 
   return (
     <Provider store={store}>
-      <NavigationContainer>
-        {/* <RootNavigation/> */}
-        <TabNav/>
-      </NavigationContainer>
-    </Provider>
+      <MainNav/>
+    </Provider> 
   )
 }
+

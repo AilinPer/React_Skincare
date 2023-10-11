@@ -6,6 +6,7 @@ import ProductItem from '../components/ProductItem'
 import { colors } from '../theme/colors'
 import { AntDesign } from "@expo/vector-icons";
 import { useSelector } from "react-redux"
+import { useGetProductsQuery } from "../services/ecommerceApi"
 
 const Products = ({navigation, route}) => {
 
@@ -15,7 +16,8 @@ const Products = ({navigation, route}) => {
 
     const products = useSelector( state => state.homeSlice.allProducts )
     //console.log(JSON.stringify(products, null, " "))
-
+    const { data  } = useGetProductsQuery()
+    console.log(JSON.stringify(data, null, " "))
 
     useEffect(() => {
         const categoriaProducto = products.filter((el) => el.categoria === item)
